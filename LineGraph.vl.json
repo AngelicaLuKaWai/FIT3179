@@ -1,0 +1,35 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Year-to-year population change of continents",
+  "width": 800,
+  "height": 450,
+  "data": {
+    "url": "https://raw.githubusercontent.com/AngelicaLuKaWai/FIT3179/main/world_population.csv"
+  },
+  "repeat": {
+    "layer": [
+      "2022 Population",
+      "2020 Population",
+      "2015 Population",
+      "2010 Population",
+      "2000 Population",
+      "1990 Population",
+      "1980 Population",
+      "1970 Population"
+    ]
+  },
+  "spec": {
+    "mark": {"type": "line"},
+    "encoding": {
+      "x": {"field": "Continent", "type": "nominal"},
+      "y": {
+        "aggregate": "sum",
+        "field": {"repeat": "layer"},
+        "type": "quantitative",
+        "title": "Population"
+      },
+      "color": {"datum": {"repeat": "layer"}, "type": "nominal"}
+    }
+  },
+  "config": {}
+}

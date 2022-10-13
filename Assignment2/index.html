@@ -17,10 +17,32 @@
     
 <script type="text/javascript">
     
-    var spec2 = "visualization.vl.json";
-    vegaEmbed('#choropleth_map', spec2).then(function(result) {
+    var specVis1 = "Choroplethmap.vl.json";
+    var specVis2 = "ContinentPieChart.vl.json";
+    var specVis3 = "LineGraph.vl.json";
+    var specVis4 = "PieChartWPP.vl.json";
+    var specVis5 = "ScatterPlot.vl.json";
+  
+    vegaEmbed('#vis1', specVis1, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
+  
+    vegaEmbed('#vis2', specVis2, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis3', specVis3, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis4', specVis4, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+  
+    vegaEmbed('#vis5', specVis5, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+  
 </script>
     
 </body>

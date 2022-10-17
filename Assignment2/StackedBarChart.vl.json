@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Year-to-year Population Change of Continents",
-  "width": 650,
-  "height": 450,
+  "width": 600,
+  "height": 400,
   "data": {
     "url": "https://raw.githubusercontent.com/AngelicaLuKaWai/FIT3179/main/world_population.csv"
   },

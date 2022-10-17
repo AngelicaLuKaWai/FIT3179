@@ -23,10 +23,10 @@
       text-align: center;
     }
      body{
-       background-color: #80ced6;
+       background-color: white;
      }
      .page{
-       width: 1000px;    
+       width: 100%;    
        background-color: white;   
        margin: auto;
        padding: 50px;
@@ -134,15 +134,30 @@
     </div>
 <!-- end pure grid group -->
     
+<!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+          <div class="description description-right">
+            <h2>The Scatter Plot</h2>
+            <p>The scatter plot shows the Growth Rate and Population in Year 2022 of Country.</p>
+          </div>
+        </div>
+      <div class="pure-u-1-1">
+        <div id="vis6" class="vis-container"></div>
+      </div>
+    </div>
+<!-- end pure grid group -->
+    
       </div> <!-- end page -->
     
 <script type="text/javascript">
     
     var specVis1 = "Choroplethmap.vl.json";
-    var specVis2 = "ContinentPieChart.vl.json";
-    var specVis3 = "LineGraph.vl.json";
-//     var specVis4 = "PieChartWPP.vl.json";
-    var specVis5 = "ScatterPlot.vl.json";
+    var specVis2 = "TopPopulation.vl.json";
+    var specVis3 = "BubblePlot.vl.json";
+    var specVis4 = "PieChartWPP.vl.json";
+    var specVis5 = "BubblePlot.vl.json";
+    var specVis6 = "StackedBarChart.vl.json";
   
     vegaEmbed('#vis1', specVis1, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
@@ -156,11 +171,15 @@
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
-//     vegaEmbed('#vis4', specVis4, {"actions": false}).then(function(result) {
-//     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-//     }).catch(console.error);
+    vegaEmbed('#vis4', specVis4, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
   
     vegaEmbed('#vis5', specVis5, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+  
+    vegaEmbed('#vis6', specVis6, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
   

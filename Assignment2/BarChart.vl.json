@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Number of countries by Continent",
-  "width": "container",
+  "width": "800",
   "height": 250,
   "data": {
     "url": "https://raw.githubusercontent.com/AngelicaLuKaWai/FIT3179/main/world_population.csv"

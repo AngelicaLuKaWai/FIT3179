@@ -1,0 +1,29 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Population Rank",
+  "width": "container",
+  "height": 250,
+  "data": {
+    "url": "https://raw.githubusercontent.com/AngelicaLuKaWai/FIT3179/main/world_population.csv"
+  },
+  "params": [
+    {
+      "name": "Rank",
+      "value": 10,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 234,
+        "step": 1,
+        "name": "Rank by Population: "
+      }
+    }
+  ],
+  "transform": [{"filter": "datum.Rank <= Rank"}],
+  "mark": {"type": "bar", "tooltip": true},
+  "encoding": {
+    "x": {"field": "2022 Population", "type": "quantitative"},
+    "y": {"field": "Country", "type": "nominal", "sort": {"field": "Rank"}}
+  },
+  "config": {}
+}

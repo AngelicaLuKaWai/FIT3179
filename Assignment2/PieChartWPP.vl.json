@@ -1,0 +1,58 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 250,
+  "title": "World Population Percentage by Continent",
+  "data": {
+    "url": "https://raw.githubusercontent.com/AngelicaLuKaWai/FIT3179/main/world_population.csv"
+  },
+  "transform": [
+    {
+      "aggregate": [
+        {
+          "op": "sum",
+          "field": "World Population Percentage",
+          "as": "Sum of World Population Percentage by Continent(%)"
+        }
+      ],
+      "groupby": ["Continent"]
+    }
+  ],
+  "mark": "arc",
+  "encoding": {
+    "theta": {
+      "field": "Sum of World Population Percentage by Continent(%)",
+      "type": "quantitative"
+    },
+    "color": {
+      "field": "Continent",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Africa",
+          "Asia",
+          "Europe",
+          "North America",
+          "Oceania",
+          "South America"
+        ],
+        "range": [
+          "#e41a1c",
+          "#984ea3",
+          "#ff7f00",
+          "#a6cee3",
+          "#377eb8",
+          "#a65628"
+        ]
+      }
+    },
+    "tooltip": [
+      {
+        "field": "Sum of World Population Percentage by Continent(%)",
+        "type": "quantitative"
+      },
+      {"field": "Continent", "type": "nominal", "title": "Continent"}
+    ]
+  },
+  "config": {}
+}

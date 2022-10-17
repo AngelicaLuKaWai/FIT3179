@@ -10,7 +10,7 @@
         {
           "op": "sum",
           "field": "2022 Population",
-          "as": "sum of 2022 Population by Continent"
+          "as": "Sum of 2022 Population by Continent"
         }
       ],
       "groupby": ["Continent"]
@@ -19,12 +19,12 @@
   "mark": "arc",
   "encoding": {
     "theta": {
-      "field": "sum of 2022 Population by Continent",
+      "field": "Sum of 2022 Population by Continent",
       "type": "quantitative"
     },
     "color": {"field": "Continent", "type": "nominal"},
     "tooltip": [
-      {"field": "sum of 2022 Population by Continent", "type": "quantitative"},
+      {"field": "Sum of 2022 Population by Continent", "type": "quantitative"},
       {"field": "Continent", "type": "nominal", "title": "Continent"}
     ]
   },
